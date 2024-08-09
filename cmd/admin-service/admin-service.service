@@ -1,0 +1,13 @@
+[Unit]
+Description=Admin REST API Service (go)
+
+[Service]
+Type=simple
+Restart=on-failure
+Restart=always
+RestartSec=5s
+WorkingDirectory=/root/sakthi/go_api/cmd/admin-service/
+ExecStart=/root/sakthi/go_api/cmd/admin-service/admin-service
+LogsDirectory=/root/sakthi/logs/
+[Install]
+WantedBy=multi-user.target
